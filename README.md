@@ -112,7 +112,7 @@ Buzz
 
 this list is 689 entries so I suppose it'll keep me busy over the next couple of years. 
 
-- [ ]	A.NET (A#/A sharp)
+- [X]	A.NET (A#/A sharp)
 - [ ]	A-0 System
 - [ ]	A+ (A plus)
 - [ ]	ABAP
