@@ -4,8 +4,8 @@ A#: https://asharp.martincarlisle.com/
 
 A# is a port of Ada. I don't know what that is. 
 
-Excitingly enough, A# is apparently integrated into visual studio 2005. I can barely contain myself. 
-I have apparently installed a# from a shady-looking sourceforge exe. It wanted to install onto C:\. 
+Excitingly enough, A# is integrated into visual studio 2005. I can barely contain myself. 
+I have installed a# from a shady-looking sourceforge exe. It wanted to install onto C:\. 
 
 It installed an empty directory with a 1kB. The file is titled, "Limitations.txt". Here is its contents: 
     Does not handle importing "ref bool", "ref int", "ref float"
@@ -15,7 +15,7 @@ According to Apps and Features, the installation is 857 kB.
 
 I have uninstalled it. 
 
-After rummaging around the A# sourceforge page, I've found a visual studio 2005 install. lets try that bad boy on for size. 
+After rummaging around the A# sourceforge page, I've found a visual studio 2005 install. Lets try that bad boy on for size. 
 
 Well it installs the integration. cool. but it unsurprisingly does not install visual studio 2005. As it turns out, other folks have already installed 2005. It doesn't work on Windows 10.
 
