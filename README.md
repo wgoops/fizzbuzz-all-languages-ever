@@ -3,8 +3,7 @@ doesn't include esoteric, dialects of BASIC, or markup languages. List is from h
 let's just get past the A's first. 
 
 FizzBuzz will be defined using imram's original example: 
-_Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
-_
+*Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.*
 
 The output should be as follows: 
 ```
