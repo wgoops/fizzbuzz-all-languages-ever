@@ -68,3 +68,5 @@ So I either ran the A# Setup wrong, or this is how things are supposed to be don
     5. Finally, run register_mgnat.bat in the DLL folder to install the Ada libraries as .NET DLLs
 
 I was able to successfully run hello.exe
+
+After some research into ada, I was able to compile fizzbuzz.adb in visual studio 2022 and run fizzbuzz.exe
