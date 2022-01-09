@@ -1,9 +1,8 @@
 [000]B00 054 A00 047 [## INCREMENTER ## (B) Load m_NUMTOINCREMENT into A, (A) Add m_ONE to A]
-[001]L00 048 T00 035 [(L) Load m_HUNDRED into L, (T) If A > L, jump to m_HALTER]
+[001]L00 048 000 000 [(L) Load m_HUNDRED into L, (T) If A > L, jump to m_HALTER]
 [002]H00 057 H00 054 [(H) Load A into m_NUMTODIVIDE, (H) Store A in m_NUMTOINCREMENT,]
 [003]F00 046 G00 055 [Set F to m_ZERO, Set m_FIZZ_FLAG to m_ZERO]
 [004]G00 056 000 000 [(G) Set m_BUZZ_FLAG to F]
-
 [005]B00 057 S00 049 [## m_DIVIDE_BY_THREE ## (B) Load m_NUMTODIVIDE into A, (S) Subtract A by m_THREE] 
 [006]H00 057 L00 058 [(H) Load A into m_NUMTODIVIDE, (L) Load m_EQUALZERO into L]
 [007]000 000 Q00 027 [(Q) If A == L, jump to m_FIZZFLAGGER]
@@ -11,9 +10,7 @@
 [009]U00 010 U00 010
 [010]B00 046 T00 012 [(B) Set A to m_ZERO which is needed for awful reasons, (T) if A > L, jump to m_PREP_DIVIDE_BY_FIVE]
 [011]U00 005 U00 005 [(U) Jump to m_DIVIDE_BY_THREE]
-
 [012]B00 054 H00 057 [## m_PREP_DIVIDE_BY_FIVE ## (B) Load m_NUMTOINCREMENT into A, (H) Load A into m_NUMTODIVIDE] 
-
 [013]B00 057 S00 050 [## m_DIVIDE_BY_FIVE ## (B) Load m_NUMTODIVIDE into A, (S) Subtract A by m_FIVE] 
 [014]H00 057 L00 058 [(H) Load A into m_NUMTODIVIDE, (L) Load m_EQUALZERO into L]
 [015]000 000 Q00 029 [(Q) If A == L, jump to m_BUZZFLAGGER] 
@@ -21,31 +18,24 @@
 [017]B00 046 T00 020 [(B) Set A to m_ZERO, (T) if A > L, jump to m_PRINTER]
 [018]U00 013 U00 013 [(U) Jump to m_DIVIDE_BY_FIVE]
 [019]U00 020 U00 020
-
 [020]L00 047 B00 055 [## m_PRINTER ## (L) Load m_ONE into L, (B) Load m_FIZZ_FLAG into A] 
-[021]000 000 Q00 031 [(Q) If A == L, jump to m_FIZZ_PRINTER
+[021]000 000 Q00 032 [(Q) If A == L, jump to m_FIZZ_PRINTER
 [022]B00 056 000 000 [(B) Load m_BUZZ_FLAG into A]
-[023]000 000 Q00 033 [(Q) If A == L, jump to m_BUZZ_PRINTER] 
+[023]000 000 Q00 034 [(Q) If A == L, jump to m_BUZZ_PRINTER] 
 [024]B00 054 A00 059 [(B) Set A equal to m_NUMTOINCREMENT, (A)Add A to m_TELEPRINTER_ADD]
 [025]H00 045 500 045 [Set m_TELEPRINTER to A, (50) Print m_NUMTOINCREMENT]
 [026]U00 000 U00 000 [(U) Jump to m_INCREMENTER]
-
 [027]F00 047 G00 055 [## m_FIZZ_FLAGGER ## (F) Load m_ONE to F, (G) Store F in m_FIZZ_FLAG]
-[028]U00 013 U00 013 [(U) Jump to m_DIVIDE_BY_FIVE]
-
-[029]F00 047 G00 056 [## m_BUZZ_FLAGGER ## (F) Load 1 to F, (G) Store F in m_BUZZ_FLAG] 
-[030]U00 020 U00 020 [(U) Jump to m_PRINTER]
-
-[031]B00 056 Q00 033 [## m_FIZZ_PRINTER ## (B) Load m_BUZZ_FLAG into A, (Q) if A == L, jump to m_FIZZBUZZ_PRINTER] 
-[032]500 051 U00 000 [(50) Print m_FIZZ, (U) Jump to m_INCREMENTER]
-
-[033]500 052 U00 000 [## m_BUZZ_PRINTER ## (50) Print m_BUZZ, (U) Jump to m_INCREMENTER] 
-
-[034]500 053 U00 000 [## m_FIZZBUZZ_PRINTER ## (50) Print m_FIZZBUZZ, (U) Jump to m_INCREMENTER ]
-
-[035]900 000 000 000 [## HALTER ## (90) halt machine ]
-
-<045>00000000000\r [m_TELEPRINTER]
+[028]U00 012 U00 012 [(U) Jump to m_PREP_DIVIDE_BY_FIVE]
+[029]U00 030 U00 030
+[030]F00 047 G00 056 [## m_BUZZ_FLAGGER ## (F) Load 1 to F, (G) Store F in m_BUZZ_FLAG] 
+[031]U00 020 U00 020 [(U) Jump to m_PRINTER]
+[032]B00 056 Q00 035 [## m_FIZZ_PRINTER ## (B) Load m_BUZZ_FLAG into A, (Q) if A == L, jump to m_FIZZBUZZ_PRINTER] 
+[033]500 051 U00 000 [(50) Print m_FIZZ, (U) Jump to m_INCREMENTER]
+[034]500 052 U00 000 [## m_BUZZ_PRINTER ## (50) Print m_BUZZ, (U) Jump to m_INCREMENTER] 
+[035]500 053 U00 000 [## m_FIZZBUZZ_PRINTER ## (50) Print m_FIZZBUZZ, (U) Jump to m_INCREMENTER ]
+[036]900 000 000 000 [## HALTER ## (90) halt machine ]
+<045>00000000000 [m_TELEPRINTER]
 [046]00000000000 [m_ZERO] 
 [047]00000000010 [m_ONE]
 [048]00000001000 [m_HUNDRED]
