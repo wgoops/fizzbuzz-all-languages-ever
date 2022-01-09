@@ -21,6 +21,7 @@
 
 ## m_PREP_DIVIDE_BY_FIVE ##
 [(B) Load m_NUMTOINCREMENT into A]
+[(H) Load A into m_NUMTODIVIDE]
 
 
 ## m_DIVIDE_BY_FIVE ##
@@ -37,9 +38,9 @@
 
 ## m_PRINTER ##
 [(L) Load m_ONE into L]
-[(B) Load m_FIZZ into A]
+[(B) Load m_FIZZ_FLAG into A]
 [(Q) If A == L, jump to m_FIZZ_PRINTER]
-[(B) Load m_BUZZ into A]
+[(B) Load m_BUZZ_FLAG into A]
 [(Q) If A == L, jump to m_BUZZ_PRINTER]
 [(50) Print m_NUMTOINCREMENT]
 [(U) Jump to m_INCREMENTER]
@@ -47,18 +48,18 @@
 
 ## m_FIZZ_FLAGGER ## 
 [(F) Load 1 to f]
-[(G) Store F in m_FIZZFLAGGER]
+[(G) Store F in m_FIZZ_FLAG]
 [(U) Jump to m_DIVIDE_BY_FIVE]
 
 
 ## m_BUZZ_FLAGGER ## 
-[(F) Load 1 to f]
-[(G) Store F in m_BUZZFLAGGER]
+[(F) Load 1 to F]
+[(G) Store F in m_BUZZ_FLAGGER]
 [(U) Jump to m_PRINTER]
 
 
 ## m_FIZZ_PRINTER ##
-[(B) Load m_BUZZ into A]
+[(B) Load m_BUZZ_FLAG into A]
 [(Q) if A == L, jump to m_FIZZBUZZ_PRINTER]
 [(50) Print m_FIZZ]
 [(U) Jump to m_INCREMENTER]
@@ -91,4 +92,6 @@ m_FIZZBUZZ = FizzBuzz\d\d\d\r
 
 ## VARIABLES ##
 m_NUMTOINCREMENT
-m_FIZZFLAGGER
+m_FIZZ_FLAGGER
+m_FIZZ_FLAG 
+m_BUZZ_FLAG

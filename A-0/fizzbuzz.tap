@@ -1,52 +1,39 @@
-[000]B00 035 A00 028 [(B) Load m_NUMTOINCREMENT into A, (A) Add m_ONE to A] ## INCREMENTER ##
+[000]B00 035 A00 028 [## INCREMENTER ## (B) Load m_NUMTOINCREMENT into A, (A) Add m_ONE to A]
 [001]H00 035 L00 029 [(H) Store A in m_NUMTOINCREMENT, [(L) Load m_HUNDRED into L]
 [002]T00 026 A00 038 [(T) If A > L, jump to m_HALTER, (H) Load A into m_NUMTODIVIDE]
-[003][(B) Load m_NUMTODIVIDE into A, (S) Subtract A by m_THREE] ## m_DIVIDE_BY_THREE ##
-
-[004][(H) Load A into m_NUMTODIVIDE, (L) Load m_ZERO into L]
-[005][(Q) If A == L, jump to m_FIZZFLAGGER, (K) Move A to L and set A to 0]
-[006][(B) Set A to m_ZERO, (T) if A > L, jump to m_PREP_DIVIDE_BY_FIVE]
-[007][(U) Jump to m_DIVIDE_BY_THREE]
-[008][(B) Load m_NUMTOINCREMENT into A] ## m_PREP_DIVIDE_BY_FIVE ##
-
-[009][(B) Load m_NUMTODIVIDE into A, (S) Subtract A by m_FIVE] ## m_DIVIDE_BY_FIVE ##
-
-[010][(H) Load A into m_NUMTODIVIDE, (L) Load m_ZERO into L]
-[011][(Q) If A == L, jump to m_BUZZFLAGGER, (K) Move A to L and set A to 0]
-[012][(B) Set A to m_ZERO, (T) if A > L, jump to m_PRINTER]
-[013][(U) Jump to m_DIVIDE_BY_FIVE]
-
-[014][(L) Load m_ONE into L, (B) Load m_FIZZ into A] ## m_PRINTER ##
-[015][(Q) If A == L, jump to m_FIZZ_PRINTER, (B) Load m_BUZZ into A]
-[016][(Q) If A == L, jump to m_BUZZ_PRINTER, (50) Print m_NUMTOINCREMENT]
-[017][(U) Jump to m_INCREMENTER]
-
-[018][(F) Load 1 to F, (G) Store F in m_FIZZFLAGGER] ## m_FIZZ_FLAGGER ## 
-[019][(U) Jump to m_DIVIDE_BY_FIVE]
-
-[020][(F) Load 1 to F, (G) Store F in m_BUZZFLAGGER] ## m_BUZZ_FLAGGER ## 
-[021][(U) Jump to m_PRINTER]
-
-[022][(B) Load m_BUZZ into A, (Q) if A == L, jump to m_FIZZBUZZ_PRINTER] ## m_FIZZ_PRINTER ##
-[023][(50) Print m_FIZZ, (U) Jump to m_INCREMENTER]
-
-[024][(50) Print m_BUZZ, (U) Jump to m_INCREMENTER] ## m_BUZZ_PRINTER ##
-
-[025][(50) Print m_FIZZBUZZ, (U) Jump to m_INCREMENTER] ## m_FIZZBUZZ_PRINTER ##
-
-[026][(90) halt machine] ## HALTER ##
-
-[027]m_ZERO = -00000000000 ## CONSTANTS ##
-
-[028]m_ONE = 00000000001
-[029]m_HUNDRED = 00000000100
-[030]m_THREE = 00000000003
-[031]m_FIVE = 00000000005
-[032]m_FIZZ = Fizz\d\d\d\d\d\d\d\r
-[033]m_BUZZ = Buzz\d\d\d\d\d\d\d\r
-[034]m_FIZZBUZZ = FizzBuzz\d\d\d\r
-
-[035]000000000000 [m_NUMTOINCREMENT] ## VARIABLES ##
-[036]m_FIZZFLAGGER
-[037]m_BUZZFLAGGER
-[038]m_NUMTODIVIDE
+[003]B00 038 S00 030 [## m_DIVIDE_BY_THREE ## (B) Load m_NUMTODIVIDE into A, (S) Subtract A by m_THREE] 
+[004]H00 038 L00 027 [(H) Load A into m_NUMTODIVIDE, (L) Load m_ZERO into L]
+[005]Q00 018 K00 000 [(Q) If A == L, jump to m_FIZZFLAGGER, (K) Move A to L and set A to 0]
+[006]B00 027 T00 008 [(B) Set A to m_ZERO which is needed for awful reasons, (T) if A > L, jump to m_PREP_DIVIDE_BY_FIVE]
+[007]U00 003 U00 003 [(U) Jump to m_DIVIDE_BY_THREE]
+[008]B00 035 H00 038 [## m_PREP_DIVIDE_BY_FIVE ## (B) Load m_NUMTOINCREMENT into A, (H) Load A into m_NUMTODIVIDE] 
+[009]B00 038 S00 031 [## m_DIVIDE_BY_FIVE ## (B) Load m_NUMTODIVIDE into A, (S) Subtract A by m_FIVE] 
+[010]H00 038 L00 027 [(H) Load A into m_NUMTODIVIDE, (L) Load m_ZERO into L]
+[011]Q00 020 K00 000 [(Q) If A == L, jump to m_BUZZFLAGGER, (K) Move A to L and set A to 0]
+[012]B00 027 T00 014 [(B) Set A to m_ZERO, (T) if A > L, jump to m_PRINTER]
+[013]U00 009 U00 009 [(U) Jump to m_DIVIDE_BY_FIVE]
+[014]L00 028 B00 036 [## m_PRINTER ## (L) Load m_ONE into L, (B) Load m_FIZZ_FLAGGER into A] 
+[015]Q00 022 B00 037 [(Q) If A == L, jump to m_FIZZ_PRINTER, (B) Load m_BUZZ_FLAGGER into A]
+[016]Q00 024 500 035 [(Q) If A == L, jump to m_BUZZ_PRINTER, (50) Print m_NUMTOINCREMENT]
+[017]U00 000 U00 000 [(U) Jump to m_INCREMENTER]
+[018]F00 028 G00 036 [## m_FIZZ_FLAGGER ## (F) Load 1 to F, (G) Store F in m_FIZZ_FLAGGER]
+[019]U00 009 000 000 [(U) Jump to m_DIVIDE_BY_FIVE]
+[020]F00 028 G00 037 [## m_BUZZ_FLAGGER ## (F) Load 1 to F, (G) Store F in m_BUZZ_FLAGGER] 
+[021]U00 014 000 000 [(U) Jump to m_PRINTER]
+[022]B00 037 Q00 025 [## m_FIZZ_PRINTER ## (B) Load m_BUZZ_FLAG into A, (Q) if A == L, jump to m_FIZZBUZZ_PRINTER] 
+[023]500 032 U00 000 [(50) Print m_FIZZ, (U) Jump to m_INCREMENTER]
+[024]500 033 U00 000 [## m_BUZZ_PRINTER ## (50) Print m_BUZZ, (U) Jump to m_INCREMENTER] 
+[025]500 034 U00 000 [## m_FIZZBUZZ_PRINTER ## (50) Print m_FIZZBUZZ, (U) Jump to m_INCREMENTER ]
+[026]900 000 000 000 [## HALTER ## (90) halt machine ]
+[027]00000000000 [m_ZERO] 
+[028]00000000010 [m_ONE]
+[029]00000001000 [m_HUNDRED]
+[030]00000000030 [m_THREE]
+[031]00000000050 [m_FIVE]
+[032]Fizz\d\d\d\d\d\d\d\r [m_FIZZ]
+[033]Buzz\d\d\d\d\d\d\d\r [m_BUZZ]
+[034]FizzBuzz\d\d\d\r [m_FIZZBUZZ]
+[035]000000000000 [m_NUMTOINCREMENT ## VARIABLES ##]
+[036]000000000000 [m_FIZZ_FLAG]
+[037]000000000000 [m_BUZZ_FLAG]
+[038]000000000000 [m_NUMTODIVIDE]
