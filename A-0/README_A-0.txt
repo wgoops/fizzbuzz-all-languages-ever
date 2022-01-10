@@ -1,6 +1,6 @@
 Language: A-0 (basically just a windows compiler for Ada)
 OS: Windows 10
-Emulator: UNIVAC I from Historic Simulations (http://www.historicsimulations.com/univac.html)
+Emulator: UNIVAC I from Historic Simulations (http://www.historicsimulations.com/univac.html) or Mirror (https://web.archive.org/web/20210614122019/http://www.historicsimulations.com/univac.html) 
 
 Installation: 
     Univac.exe should work out of the box. We will run our code in this emulator.
