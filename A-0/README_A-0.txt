@@ -9,6 +9,7 @@ Installation:
 Running A-0 scripts: 
 
     Prerequisites: 
+        - Downloaded Univac 1 emulator from http://www.historicsimulations.com/univac.html  
         - Univac.exe is running. 
         - Script is no more than 60 lines (unless you want to get fancy and learn how to load more than 60
             lines into memory.)
