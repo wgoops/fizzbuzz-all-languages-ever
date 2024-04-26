@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> The A+ Programming Language · Probably Programming </title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/poole.css">
+  <link rel="stylesheet" href="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/syntax.css">
+  <link rel="stylesheet" href="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/hyde.css">
+  <link rel="stylesheet" href="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/css.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://probablyprogramming.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://probablyprogramming.com/favicon.png">
+
+  
+  
+    <link href="http://probablyprogramming.com/index.xml" rel="alternate" type="application/rss+xml" title="Probably Programming">
+  
+
+  
+  <link rel="stylesheet" href="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/tomorrow.min.css">
+  <script type="text/javascript" async="" src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/ga.js"></script><script src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" async="" src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/embed.js"></script><script async="" id="dsq_recs_scr" src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/recommendations.js"></script><script src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/alfie_v4.63f1ab6d6b9d5807dc0c94ef3fe0b851.js" async="" charset="UTF-8"></script></head>
+
+<body class="theme-base-0d">
+
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="http://probablyprogramming.com/">Probably Programming</a></h1>
+      <p class="lead">
+       It's what I'm doing. 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="http://probablyprogramming.com/">Home</a> </li>
+      
+    </ul>
+
+    <div class="category-list-title">Posts by year:</div>
+<ul class="category-list">
+  
+  
+    
+      <li>
+        
+        
+          <a href="http://probablyprogramming.com/2007">2007</a>
+        
+      </li>
+    
+  
+    
+      <li>
+        
+        
+          <a href="http://probablyprogramming.com/2008">2008</a>
+        
+      </li>
+    
+  
+    
+      <li>
+        
+        
+          <a href="http://probablyprogramming.com/2009">2009</a>
+        
+      </li>
+    
+  
+    
+      <li>
+        
+        
+          <a href="http://probablyprogramming.com/2010">2010</a>
+        
+      </li>
+    
+  
+    
+      <li>
+        
+        
+          <a href="http://probablyprogramming.com/2011">2011</a>
+        
+      </li>
+    
+  
+    
+      <li>
+        
+        
+          <a href="http://probablyprogramming.com/2015">2015</a>
+        
+      </li>
+    
+  
+</ul>
+
+
+    <p>© 2015. <nobr>All rights reserved.</nobr> </p>
+  </div>
+</div>
+
+
+  <div class="content container">
+    
+      <a href="http://probablyprogramming.com/2009/07/13/the-aplusplus-programming-language/" class="prev-post">← The A++ Programming Language</a>
+    
+    
+      <a href="http://probablyprogramming.com/2009/07/06/500-programming-languages/" class="next-post">500 Programming Languages →</a>
+    
+
+    <div class="post">
+      <h1>The A+ Programming Language</h1>
+      <span class="post-date">
+        Posted Sat, Jul 11, 2009
+        in: <ul class="category-list">
+          
+            <li><a href="http://probablyprogramming.com/categories/500-programming-languages">500 Programming Languages</a></li>
+          
+            <li><a href="http://probablyprogramming.com/categories/programming-languages">Programming Languages</a></li>
+          
+        </ul>
+      </span>
+      
+
+<p><a class="postimage" href="http://probablyprogramming.com/2009/07/11/the-aplus-programming-language/"><img src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/aplushead.png" alt="aplushead" title="aplushead" width="425" height="282"></a></p>
+
+<p>I didn’t intend for it to take me a week to write this post, but I had
+some technical difficulties in getting started, which prevented me
+from even starting to learn the language until I solved them.</p>
+
+<p>I expected to run into some problems getting things set up as I worked
+on this project, but I assumed most of those problems would be along
+the lines of getting the compiler and/or interpreter for a particular
+language to compile or run on my machine.</p>
+
+<p>What I didn’t expect was to have so many issues just getting my text
+to be in the encoding that the language expects, but that is exactly
+what I ran into with A+.</p>
+
+<h3 id="introduction-to-a:21a3babd0fb8925e7c333ad59da7cb59">Introduction to A+</h3>
+
+<p><a href="http://aplusdev.or/">A+</a> is a high-level language with a large number of primitive functions
+for manipulating arrays of data. It was created in 1988 at <a href="http://www.morganstanley.com/">Morgan
+Stanley</a> by Arthur Whitney, after he
+decided that none of the existing APL implementations would be
+suitable for their purposes.</p>
+
+<p>A+ is a dialect of APL, and offers some extensions, such as a
+graphical user interface and inter-process communication, as well a
+module for storing and loading objects (functions, variables, and
+dependencies) and even a built-in database system.</p>
+
+<p>Another feature A+ adds is the ability to set up dependencies between
+variables, so when a depended-upon variable is changed, the dependent
+variable changes as well. This allows for spreadsheet-like or reactive
+programming, with barely any effort. Actually, combined with the
+graphical display capabilities, you could actually pretty easily
+implement a spreadsheet in A+ if you felt like it.</p>
+
+<p>Any dyadic (two-argument) function can be called using infix notation,
+which takes a little getting used to, especially with the
+right-to-left no order-of-operations precedence rules.</p>
+
+<p>The language uses a healthy subset of the crazy hieroglyphs included
+in APL, and requires a <a href="http://aplusdev.org/Download/index.html">special
+font</a> for properly displaying
+the special characters. It’s also possible to use one of two
+ASCII-based modes when programming in A+, but where’s the fun in that?</p>
+
+<p>After playing around with the language for a while, I can see why
+people enjoy APL and its derivatives so much. It’s one of those
+language where once you wrap your brain around it, it opens up new
+ways of solving problems that you’d never even considered before.</p>
+
+<h3 id="my-first-a-program:21a3babd0fb8925e7c333ad59da7cb59">My First A+ program</h3>
+
+<p><a href="http://probablyprogramming.com/wp-content/uploads/2009/07/lifescreen.png"><img src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/lifescreen-300x165.png" alt="lifescreen" title="lifescreen" class="alignleft size-medium wp-image-405" width="300" height="165"></a>
+I decided on a (sort-of) graphical implementation of <a href="http://en.wikipedia.org/wiki/Conways_life">Conway’s Life</a>, to demonstrate both the graphical system and the array-handling capabilities of A+.</p>
+
+<p>This program is special because it’s not only my first A+ program,
+it’s my first program in an APL-like language of any sort.</p>
+
+<p>You won’t be able to copy and paste this program directly and run it
+from A+, because I’ve converted the symbols to unicode in hopes of
+having them display properly in more browsers. If they don’t display
+properly, you can take a look at a <a href="http://probablyprogramming.com/wp-content/uploads/2009/07/aplusscreenshot.png">screen-shot of the source code</a>.</p>
+
+<p>If you would like to run it, you can download the <a href="http://probablyprogramming.com/wp-content/uploads/2009/07/life.+">A+ life source</a>.</p>
+
+<pre><code class="language-haskell hljs coffeescript">    $load s          ⍝ Load the graphical system
+    
+    xy take2 <span class="hljs-attribute">m</span>: xy[<span class="hljs-number">0</span>] ↑ ⍉ xy[<span class="hljs-number">1</span>] ↑ ⍉ m  ⍝ helper <span class="hljs-reserved">function</span> to resize an array <span class="hljs-keyword">in</span> <span class="hljs-number">2</span>d
+    n xr <span class="hljs-attribute">m</span>: ⍉ n ⌽ ⍉m                   ⍝ helper <span class="hljs-reserved">function</span> to rotate <span class="hljs-literal">on</span> the x axis
+    xy rot2 <span class="hljs-attribute">m</span>: xy[<span class="hljs-number">0</span>] ⌽ ⍉ xy[<span class="hljs-number">1</span>] ⌽ ⍉m    ⍝ helper <span class="hljs-reserved">function</span> to rotate <span class="hljs-keyword">in</span> <span class="hljs-number">2</span>d
+    
+    nextgen <span class="hljs-attribute">gen</span>: {   ⍝ Calculate the next generation
+            sums ← +<span class="hljs-regexp">/+/</span>&gt; (<span class="hljs-number">1</span>;<span class="hljs-number">0</span>;¯<span class="hljs-number">1</span>) xr¨ <span class="hljs-number">3</span>⍴&lt;&gt;(<span class="hljs-number">1</span>;<span class="hljs-number">0</span>;¯<span class="hljs-number">1</span>) ⌽¨ <span class="hljs-number">3</span>⍴&lt;gen;
+            (gen ∧ <span class="hljs-number">4</span>=sums) ∨ (<span class="hljs-number">3</span>=sums)
+            }
+    
+    cells ← ¯<span class="hljs-number">6</span> ¯<span class="hljs-number">6</span> rot2 <span class="hljs-number">15</span> <span class="hljs-number">15</span> take2 <span class="hljs-number">3</span> <span class="hljs-number">3</span>⍴<span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> ⍝ start <span class="hljs-reserved">with</span> a glider centered
+    `<span class="javascript">cells is </span>`array
+    
+    step <span class="hljs-attribute">c</span>: .cells ← nextgen cells
+    step_button ← (step;cells)
+    `<span class="javascript">step_button has (</span>`<span class="hljs-class"><span class="hljs-keyword">class</span>; `<span class="hljs-title">button</span>;</span>
+                      `<span class="javascript">title; <span class="hljs-string">"Step"</span>)
+    
+    w ← (</span>`cells;`<span class="javascript">step_button)     ⍝ Initialize our window
+    </span>`w <span class="hljs-keyword">is</span> `<span class="javascript">layout
+    </span>`w has (`<span class="javascript">title; <span class="hljs-string">"A+ Life"</span>)
+    show </span>`w
+</code></pre>
+
+<p>The most important function of the program is the “nextgen” function.</p>
+
+<p>On the first line, reading from right to left, it does the following:</p>
+
+<ol>
+<li>Make an matrix containing 3 copies of the gen matrix</li>
+<li>Rotate each of those three copies verically by 1, 0, and -1 rows, respectively</li>
+<li>Make three copies of each of the three copies from the first step.</li>
+<li>Rotate the copies of copies horizontally by 1, 0, and -1 columns.</li>
+<li>Sum the rows and columns of matrices together into a single matrix.</li>
+</ol>
+
+<p>On the second line, again, reading from the right to left:</p>
+
+<ol>
+<li>Get an matrix with any cell equal to 3 changed to 1, and any others changed to 0.</li>
+<li>Logically OR that matrix together with the array consisting of ones 
+in the place of any 4s in the sums matrix, ANDed with the original gen 
+matrix.</li>
+</ol>
+
+<p>A more thorough explanation of the algorithm can be found at the <a href="http://aplwiki.com/GameOfLife">APL
+wiki</a>. You’ll notice that my version is
+quite different. That’s mostly because of difference in how the
+various build-in functions work in A+ and other APL
+implementations. That’s the same reason I had to implement the take2
+and rot2 functions, since the A+ rotate (circle with a vertical line)
+and take (arrow pointing up) functions only allow you to rotate or
+take in a single dimension.</p>
+
+<p><strong>continue reading to learn more about A+</strong></p>
+
+<h3 id="anatomy-of-an-a-program:21a3babd0fb8925e7c333ad59da7cb59">Anatomy of an A+ Program</h3>
+
+<p>A+ programs consist of files, which when loaded act exactly the same
+way as they would if you typed in into the interactive shell one line
+at a time.</p>
+
+<p>Statements can include function definitions</p>
+
+<pre><code class="language-haskell hljs xml">    x plus y: x + y 
+    negate x: -x
+    minus{x; y}: x - y
+    nextgen gen: {   ⍝ Calculate the next generation
+            sums ← +/+/&gt; (1;0;¯1) xr¨ 3⍴<span class="hljs-tag">&lt;&gt;</span>(1;0;¯1) ⌽¨ 3⍴<span class="hljs-tag">&lt;<span class="hljs-title">gen;
+</span>            (<span class="hljs-attribute">gen</span> ∧ <span class="hljs-attribute">4</span>=<span class="hljs-value">sums)</span> ∨ (<span class="hljs-attribute">3</span>=<span class="hljs-value">sums)</span>
+            }
+</span></code></pre>
+
+<p>..assignments and function calls</p>
+
+<pre><code class="language-haskell hljs coffeescript">    five ← <span class="hljs-number">2</span> plus <span class="hljs-number">3</span>
+    four ← plus{<span class="hljs-number">2</span>;<span class="hljs-number">2</span>}
+    negone ← negate <span class="hljs-number">1</span>
+    ⍝ <span class="hljs-keyword">this</span> <span class="hljs-keyword">is</span> a comment
+    ten ← plus<span class="hljs-regexp">/1 2 3 4 ⍝ the /</span> (reduction) operator successively applies the <span class="hljs-reserved">function</span>
+</code></pre>
+
+<p>..and that’s really pretty much it (with the exception of dependencies
+and control statements, I’ll let you discover those on your own).</p>
+
+<p>As you can (hopefully) see, the syntax is pretty simple, with some trickiness when
+it comes to defining arrays and the order of operations.</p>
+
+<h3 id="installing-a:21a3babd0fb8925e7c333ad59da7cb59">Installing A+</h3>
+
+<p>All it took for me to install A+ was</p>
+
+<pre><code class="language-sh hljs cs">    apt-<span class="hljs-keyword">get</span> install aplus-fsf xfonts−kapl
+</code></pre>
+
+<p>The aplus-fsf package is also available for several other Linux
+distributions, AIX, FreeBSD, NetBSD, Solaris, Tru64 Unix, IRIX, and
+Max OS X. If there isn’t a package in your distribution (or you are
+using something other than Linux, of course), you can most likely get
+what you need from the <a href="http://aplusdev.org/Download/index.html">A+ download
+page</a>.</p>
+
+<p>They recommend using Emacs for A+ development, but sadly only XEmacs
+support seems to be provided, and it didn’t work very well for me, or
+maybe I’m just too used to “normal” Emacs.</p>
+
+<p>After spending too much time trying to get XEmacs displaying fonts
+correctly and taking input as I expect it to, I found this article on
+<a href="http://stud4.tuwien.ac.at/~e0225855/unicapl/unicapl.html">getting APL working in Emacs with
+Unicode</a>,
+which includes code to get regular Emacs working as expected, enabling
+entering of all the crazy symbols required to program in A+ or APL. It
+also provides the commands apl-aplus-to-unicode and
+apl-unicode-to-aplus to convert between the A+ format and unicode.</p>
+
+<p>For A+, though, I actually just ended up using the keyboard mapping
+file provided on that UnicAPL page, and the KAPL font (as mentioned
+above).</p>
+
+<p>I had to modify the key mapping to retain things like my arrow keys,
+home/end/pgup/pgdown, and I had to give it the proper keycode for my
+Alt Gr key.</p>
+
+<p>In Emacs, you can set the font with</p>
+
+<pre><code class="language-common-lisp hljs cs">    M-x <span class="hljs-keyword">set</span>-<span class="hljs-keyword">default</span>-font &lt;enter&gt; -*-kapl-*-*-*-*-*-<span class="hljs-number">140</span>-*-*-*-*-*-*
+</code></pre>
+
+<p>And when editing A+ files, you’ll want to make sure you set the file
+encoding:</p>
+
+<pre><code class="language-common-lisp hljs bash">    M-x <span class="hljs-keyword">set</span>-buffer-file-coding-system &lt;enter&gt; latin-<span class="hljs-number">1</span>
+</code></pre>
+
+<p>otherwise the interpreter will not recognize some of the characters.</p>
+
+<p>Unless you have a set of APL key-caps, you’ll also want to keep a copy
+of the (A+/APL keyboard chart) handy, because otherwise you will have
+no idea what keys map to what symbol.</p>
+
+<h3 id="running-a:21a3babd0fb8925e7c333ad59da7cb59">Running A+</h3>
+
+<p>You will want to play around with an interactive A+ shell to get the
+feel for some of the primitive functions and try different
+combinations until you start to understand how everything works.</p>
+
+<p>It took me a while to figure out how to get the shell to accept any
+command involving one of the special characters.</p>
+
+<p>To get an xterm running which will allow you to input text in the
+encoding that a+ expects and display characters in a font that a+
+understands, use the following:</p>
+
+<pre><code class="language-sh hljs bash">    xterm -fa kapl -en <span class="hljs-string">'ISO 8859-1'</span>
+</code></pre>
+
+<p>This sets the font to the KAPL font and the character encoding to
+“latin-1” encoding. Before I figured this out, I was baffled as to why
+when I tried to run a+ from the command-line it would give me all
+sorts of “token undefined” errors, even when I copied and pasted text
+directly from a tutorial, or the same code would run when read in from
+a file.</p>
+
+<p>A+ can be run in interactive mode by invoking a+, or a script can be
+loaded by including the name of the script to run. Of course, the
+script may still end up in interactive mode if it doesn’t quit the
+interpreter at the end of its execution.</p>
+
+<p>There really is no difference between specifying a file at the command
+line and typeing</p>
+
+<pre><code class="language-haskell hljs bash">    <span class="hljs-variable">$load</span> filename
+</code></pre>
+
+<p>from the interactive shell.</p>
+
+<h3 id="learning-more-about-a:21a3babd0fb8925e7c333ad59da7cb59">Learning more about A+</h3>
+
+<p>A great place to start learning more is <a href="http://aplusdev.org/Documentation/index.html">the A+
+documentation</a>. This
+includes a set of tutorials which will introduce you to the various
+concepts and built-in function of A+, and have you comfortable with
+typing commands in the interactive shell and figuring things out by
+experimentation by the end of it.</p>
+
+    </div>
+
+    <div id="disqus_recommendations" style="margin-bottom: 12px;"><iframe id="dsq-app5721" name="dsq-app5721" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 100% !important; border: medium none !important; overflow: hidden !important; height: 0px !important; display: inline !important; box-sizing: border-box !important;" src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/a_003.html" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe></div><div id="disqus_thread"><iframe id="dsq-app2057" name="dsq-app2057" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 1487px !important;" src="The%20A+%20Programming%20Language%20%C2%B7%20Probably%20Programming_files/a_004.html" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe></div>
+    <script type="text/javascript">
+      if (window.location.hostname == 'localhost')
+        var disqus_developer = 1;
+
+      var disqus_shortname = 'probprog';
+      var disqus_identifier = '\/2009\/07\/11\/the-aplus-programming-language\/';
+      var disqus_url = 'http://probablyprogramming.com\/2009\/07\/11\/the-aplus-programming-language\/';
+      var disqus_title = 'The A\x2b Programming Language';
+
+       
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+  </div>
+
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3098163-1']);
+  _gaq.push(['_trackPageview']);
+          
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+
+<iframe style="display: none;"></iframe><iframe style="display: none;"></iframe></body></html>

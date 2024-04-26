@@ -115,6 +115,7 @@ this list is 689 entries so I suppose it'll keep me busy over the next couple of
 - [X]	A.NET (A#/A sharp)
 - [X]	A-0 System
 - [ ]	A+ (A plus)
+    - I am stalled with this because it's a flavor of apl and I am a simple man
 - [ ]	ABAP
 - [ ]	ABC
 - [ ]	ABC ALGOL

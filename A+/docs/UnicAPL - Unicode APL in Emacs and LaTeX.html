@@ -1,0 +1,297 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="UnicAPL%20-%20Unicode%20APL%20in%20Emacs%20and%20LaTeX_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app227.us.archive.org';v.server_ms=222;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="UnicAPL%20-%20Unicode%20APL%20in%20Emacs%20and%20LaTeX_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="UnicAPL%20-%20Unicode%20APL%20in%20Emacs%20and%20LaTeX_files/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="UnicAPL%20-%20Unicode%20APL%20in%20Emacs%20and%20LaTeX_files/ruffle.js"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://web.student.tuwien.ac.at/~e0225855/unicapl/unicapl.html","20130517061825","https://web.archive.org/","web","/_static/",
+	      "1368771505");
+</script>
+<link rel="stylesheet" type="text/css" href="UnicAPL%20-%20Unicode%20APL%20in%20Emacs%20and%20LaTeX_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="UnicAPL%20-%20Unicode%20APL%20in%20Emacs%20and%20LaTeX_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    <title>UnicAPL - Unicode APL in Emacs and LaTeX</title>
+  </head>
+
+  <body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" style="display: block; direction: ltr;" lang="en">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/unicapl.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(700,27,25,2,"web","http://web.student.tuwien.ac.at/~e0225855/unicapl/unicapl.html","20130517061825",1996,"/_static/",["/_static/css/banner-styles.css?v=S1zqJCYt","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+
+    <br><br>
+    <center><h3>UnicAPL - Unicode APL in Emacs and LaTeX</h3></center>
+    <br>
+
+    <br>
+
+    Download (GNU) Emacs Lisp definitions: <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/apl.el">apl.el</a>
+    <br><br>
+    XEmacs is currently <i>not</i> supported.
+
+    <br><br>
+
+    A screenshot is <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/latex.png">here</a>.
+
+    A video demonstration is <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/unicapl.mpg">here</a>&nbsp;(0.3MB).
+
+    <br><br><br>
+    <center><h4>Getting started</h4></center>
+
+    Copy apl.el to your home directory and load it by adding:
+
+    <pre>	(load "~/apl")
+    </pre>
+
+    to your .emacs.
+
+    <br><br>
+
+    You can also specify a font for APL characters. For example,
+    GNU&nbsp;Unifont (install it!) provides all relevant
+    glyphs. Append:
+
+    <pre>      (apl-set-font "-gnu-unifont-*-r-*--*-*-*-*-*-*-ISO10646-1")
+    </pre>
+
+    to your .emacs. With Emacs 22 and later, you can use the shorter
+    form:
+    <pre>      (apl-set-font '("gnu-unifont" . "ISO10646-1"))
+    </pre>
+
+    <blockquote>
+      <hr>
+      Emacs is getting increasingly better at handling Unicode, and
+      more recent versions may choose the right glyphs for all
+      characters automatically, sometimes drawing from various fonts.
+      You therefore may not need "apl-set-font" at all. However, you
+      may still find it useful to enforce a uniform font for all APL
+      characters.
+      <hr>
+    </blockquote>
+
+    <br>
+
+    <center><h4>Unicode from ASCII transliterations</h4></center>
+
+    After restarting Emacs, you have a new input-method to enter
+    Unicode APL characters with a standard US or European keyboard,
+    using Jim Weigang's ASCII transliterations: Do
+    M-x&nbsp;set-input-method (C-x&nbsp;C-m&nbsp;C-\, or
+    C-u&nbsp;C-\) and specify <tt>apl-ascii</tt> (confirm with RET).
+    Toggle it using M-x&nbsp;toggle-input-method (C-\). If it is
+    activated, "apl" is displayed in the mode line.
+    See <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/modeline.png">screenshot</a>. You can do
+    M-x&nbsp;describe-input-method (C-h&nbsp;I) and specify
+    "apl-ascii" (or hit RET for the currently enabled method) to
+    display the defined correspondence between key sequences and
+    characters. Enter {rho}, {iota} etc. and see that Emacs performs
+    the translation to Unicode characters dynamically. If such ASCII
+    sequences already occur in the buffer, you can translate them to
+    their Unicode APL codepoints with M-x&nbsp;apl-ascii-to-unicode.
+
+    <br><br>
+
+    A reference sheet showing available ASCII sequences (omitting
+    surrounding curly braces) and their APL counterparts
+    is <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/asciiapl.pdf">here</a>.
+
+    <br><br>
+    <center><h4>Simulating a Union keyboard</h4></center>
+
+    On X Windows systems, you can use <tt>xmodmap</tt> to activate a
+    keyboard layout close to the APL "Union keyboard", which lets you
+    enter APL symbols faster. First, do
+
+    <pre>      xmodmap -pke &gt; old_layout.txt
+    </pre>
+    to save you current keyboard layout. Then, fetch usapl.txt
+    from <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/usapl.txt">here</a> and do
+
+    <pre>      xmodmap usapl.txt
+    </pre>
+
+    <blockquote>
+      <hr>
+      The layout is taken from, and compatible with A+
+      (see <a href="https://web.archive.org/web/20130517061825/http://www.aplusdev.org/keyboard.html">here</a>). If you
+      already have a customized version of that layout, it will work
+      too.
+      <hr>
+    </blockquote>
+
+    The layout is now set to yield rarely-used (in English texts)
+    Latin-1 characters if you press AltGr&nbsp;+&nbsp;<i>key</i>. For
+    example, AltGr&nbsp;+&nbsp;i yields capital&nbsp;E with acute
+    accent&nbsp;(U+00C9), one example of a (Latin-1) character that A+
+    uses in its custom encoding of APL for something else, namely to
+    denote <i>iota</i>. To translate these key strokes to the expected
+    APL Unicode codepoints in Emacs, do
+    M-x&nbsp;apl-toggle-aplus-layout. To disable the translation,
+    execute the function again. The keyboard layout is reset every
+    time you restart&nbsp;X. You can also switch to your previous
+    layout via "xmodmap old_layout.txt". (For recent versions of X and
+    xmodmap, it is also possible to set up a keyboard layout that
+    generates the proper APL Unicode characters directly.)
+
+    <br><br>
+
+    <center><h4>Saving APL programs</h4></center>
+
+    Regardless of what method you choose for input, you end up with
+    Unicode characters in your buffer.  To save your files, you can
+    use UTF-8 encoding. The coding system currently in use is also
+    displayed in the mode line. On the
+    previous <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/modeline.png">screenshot</a>, you see&nbsp;"1"
+    (standing for: Latin-1) to the right of&nbsp;"apl". Change coding
+    systems using M-x&nbsp;set-buffer-file-coding-system (or
+    C-x&nbsp;C-m&nbsp;f) , and specify&nbsp;<tt>utf-8</tt>. UTF-8 is
+    indicated by&nbsp;"u" in the mode line.
+
+
+    <br><br>
+    <hr>
+    <br><br>
+
+    <center><h4>Typesetting APL</h4></center>
+    <br>
+    
+
+    To typeset APL programs, you can use LaTeX. You need
+
+    <ul>
+      <li>a METAFONT font containing glyphs for APL characters, which
+	you can download from <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/cmapl10.mf">here</a>
+	(cmapl10.mf, taken
+	from <a href="https://web.archive.org/web/20130517061825/http://ftp.jaist.ac.jp/pub/CTAN/fonts/apl/">this
+	package</a>), and</li>
+      <li>some additional definitions from <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/apl.tex">here</a> (apl.tex)
+      </li>
+    </ul>
+
+    To embed APL programs anywhere in the document, add the following
+    <i>before</i> \begin{document} in the LaTeX-file:
+
+    <pre>      \usepackage[utf8]{inputenc}
+      \input apl
+    </pre>
+
+    Then, use <tt>verbatim</tt>-environments containing APL programs
+    with Unicode characters. Save your file in UTF-8 encoding and
+    place "apl.tex" and "cmapl10.mf" in the same directory as the
+    document. Run latex or pdflatex to generate DVI or PDF
+    documents. A screenshot of a rendered document is
+    <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/round.png">here</a>.
+
+    <br><br>
+
+    The ASCII-APL reference sheet was typeset with this method. Its
+    source is <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/asciiapl.tex">here</a>. It was largely
+    generated by <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/asciiapl.cpp">this</a> program.
+
+    <blockquote>
+      <hr>
+      The LaTeX definitions currently don't cover all APL symbols you
+      can enter in Emacs (they cover all symbols on the reference
+      sheet, though). For code exchange, you can transmit the UTF-8
+      encoded source directly if the receiver has a Unicode-capable
+      editor. To make LaTeX aware of other symbols, append appropriate
+      \DeclareUnicodeCharacter definitions to apl.tex and design the
+      glyphs in METAFONT if they can't be constructed from available
+      symbols.
+      <hr>
+    </blockquote>
+
+    <br><br>
+    <hr>
+    <br><br>
+    <center><h4>A+</h4></center>
+
+    To convert the APL symbols in an A+ source file to their Unicode
+    equivalents, mark the whole buffer (M-x&nbsp;mark-whole-buffer or
+    C-x&nbsp;h) and do M-x&nbsp;apl-aplus-to-unicode. Conversely, do
+    M-x&nbsp;apl-unicode-to-aplus on a region to convert it to A+
+    format.
+
+    <br><br>
+
+    You can thus easily generate PDF documents from A+'s plain text
+    documentation by embedding the result of the conversion in a
+    LaTeX <tt>verbatim</tt> environment. Some files of A+'s
+    documentation in PDF format:
+
+    <ul>
+      <li><a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/GettingStarted.pdf">GettingStarted.pdf</a></li>
+      <li><a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/ScalarFunctions.pdf">ScalarFunctions.pdf</a></li>
+      <li><a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/Syntax.pdf">Syntax.pdf</a></li>
+      <li><a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/SimpleArrays.pdf">SimpleArrays.pdf</a></li>
+      <li><a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/Assignment.pdf">Assignment.pdf</a></li>
+      <li><a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/NestedArrays.pdf">NestedArrays.pdf</a></li>
+    </ul>
+    The corresponding source files are:
+    <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/GettingStarted.tex">GettingStarted.tex</a>, <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/ScalarFunctions.tex">ScalarFunctions.tex</a>, <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/Syntax.tex">Syntax.tex</a>, <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/SimpleArrays.tex">SimpleArrays.tex</a>, <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/Assignment.tex">Assignment.tex</a>, <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/NestedArrays.tex">NestedArrays.tex</a>.
+
+    <br><br>
+    <hr>
+    <br>
+
+    View a page with a Unicode APL
+    program: <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/unicapl/primes.html">primes.html</a>.
+
+    <br><br>
+
+    Send a nice Unicode APL program
+    to <a href="https://web.archive.org/web/20130517061825/mailto:markus.triska@gmx.at">me</a>, either using
+    M-x&nbsp;compose-mail (C-x&nbsp;m) in Emacs, by copying the
+    characters to your mailer, or as an attachment!
+
+    <br><br>
+
+    To <b>APL vendors</b>: If you want to port your system to several
+    platforms, consider using Emacs as a portable interface (which can
+    also be used for sending mails with Unicode APL programs, for IRC
+    chats involving Unicode etc.). 
+    <br><br>
+    <hr>
+    <br><br>
+
+    All code on this page is placed in the public domain. Use any
+    portions you want for any purpose.
+
+    <br><br><br>
+    <a href="https://web.archive.org/web/20130517061825/http://web.student.tuwien.ac.at/~e0225855/index.html">Main page</a>
+    <br><br><br>
+
+  
+
+
+</body></html>
+<!--
+     FILE ARCHIVED ON 06:18:25 May 17, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:36:22 Sep 10, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 65.412 (11)
+  exclusion.robots: 0.232
+  exclusion.robots.policy: 0.22
+  cdx.remote: 0.089
+  esindex: 0.013
+  LoadShardBlock: 34.826 (3)
+  PetaboxLoader3.datanode: 64.594 (4)
+  load_resource: 150.436
+  PetaboxLoader3.resolve: 112.399
+-->

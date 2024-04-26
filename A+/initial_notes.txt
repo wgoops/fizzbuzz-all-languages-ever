@@ -1,0 +1,82 @@
+So, some basic investigation yielded a blog post into how to get this thing up and running. 
+
+Some fun (citationless) facts about the language: 
+
+    - A started in 1985 by a guy named Arthur Whitney-- this would become A+ 
+    - Whitney was apparently working at Morgan Stanley at the time
+    - Dialect of APL (oh boy oh boy)
+    - Apparently I can get what I need to run code for the language on the A+ download page... which is dead. Server is up but I get a 404 not found
+        - Wayback Machine is doing the lord's work and has made everything accessible-- I was able to get a download for the source. 
+    - I guess with what I've got, now I can go about reading the Probably Programming blog to see how this guy got the thing running.
+
+Rough Steps (in my mind)
+
+    1. Built the thing from source
+    2. Get the shell running
+    3. take a breath 
+    4. Familiarize myself with Emacs enough that I don't absolutely throw a fit.
+    5. Try to better understand why I need special magical fonts
+
+Trying to do the rough steps: 
+
+    1. Built the thing from source 
+
+        Now this is a bit problematic as all of the compilers which are verified are from the year of our lord 2001. 
+        So I guess I could use a VM and do some very cool stuff
+        let's just try it with a random ubuntu gcc compiler 
+
+        we're gonna use vagrant because I am dangerously lazy
+            - centos 7
+            - gcc 2.91.66
+
+        I also don't know vagrant however, so yeah that'll be cool
+
+        some dependencies: 
+
+            sudo apt install qemu qemu-kvm libvirt-clients libvirt-daemon-system virtinst bridge-utils
+
+        some steps: 
+
+            sudo systemctl enable libvirtd
+            sudo systemctl start libvirtd
+    
+    eh we're not doing that approach. So I'm currently rifling through VMs to find something halfway compatible. 
+    Centos 7 x86 and i386 or whatever are both not happy with the a+ RPM. 
+    I think Centos 6 will be happier. 
+
+=============
+
+    well it's the next day and I'm a clown, the repos described in the Probably Coding blog were here on ubuntu 22 
+    I downloaded all of the dependencies manually so that if some nonsense happens in the future, someone can at least 
+    just use those tars. 
+
+    Anyways. 
+
+====
+
+9/14
+        
+    alright, so AFTER the initial emacs setup where you import the unicAPL setting into emacs or whatever and set up your font: 
+
+    1. type your a+ code 
+    2. highlight all of it
+    3. convert from ascii to unicode with M-x apl-ascii-to-unicode
+    4. convert from unicode to a+ with M-x apl-unicode-to-aplus
+    
+9/15
+
+    so after a couple hours of poking into this: 
+
+    - arrays in A+ really do not want to combine types (ex. difficult to work with ints and chars in the same array)
+    - the reference guide is absolutely atrocious for learning the gist of the language. There are a series of docs 
+        which try to explain things a bit better, so I should start there
+    - language is an absolute bear and needs its own intuition-- traditional approach just needs to go out the window
+    - I could probably just do a little While loop to cheat my way through this, but it's not in the spirit of the language
+        so I'd like to avoid that
+    - I think right now, I should try to do the following: 
+        - understand how to apply conditionals to each element in an array
+        - understand how the formatting function actually works 
+        - understand how to write my own function
+    - And I think the constraints are the following: 
+        - probably cannot have an array with both numbers and letters
+        - cannot avoid learning a good bit of the terminology used in the language
